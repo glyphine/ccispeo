@@ -90,7 +90,7 @@ export default function FillInTheBlanks() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          LMAO need help? I got you :3
+          LMAO need help memorizing? I got you :3
         </motion.p>
 
         {/* Difficulty Selection */}
