@@ -85,7 +85,7 @@ export default function FillInTheBlanks() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          henloo EMC peps
+          EMC 
         </motion.h1>
         <motion.p
           className="mb-6 text-lg text-center max-w-xl"
@@ -93,7 +93,7 @@ export default function FillInTheBlanks() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          do u need help memorizing? i got you bai :3
+          need help memorizing? i got you hekhek :3
         </motion.p>
 
         {/* Difficulty Selection */}

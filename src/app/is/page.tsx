@@ -84,7 +84,7 @@ export default function FillInTheBlanks() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          henlo IS :3
+           IS 
         </motion.h1>
         <motion.p
           className="mb-6 text-lg text-center max-w-xl"
