@@ -200,7 +200,7 @@ export default function FillInTheBlanks() {
       )}
 
       <div className="absolute bottom-0 w-full text-center py-2 text-sm text-gray-400 pointer-events-none">
-        Developed by Gwyn Lobaton
+        Developed by Gwyn (glyphine)
       </div>
     </motion.div>
   );
