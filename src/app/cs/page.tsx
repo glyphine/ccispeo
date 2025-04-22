@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const levels = [
   `Articulate expertise in formulating and solving problems of interest, through the application of technology, and by using mathematical foundations, algorithmic principles, and computer science theory in the design and development of computer-based systems and processes.`,
@@ -18,7 +19,8 @@ export default function FillInTheBlanks() {
   const [started, setStarted] = useState(false);
   const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
     "easy"
-  ); // Difficulty state
+  ); 
+  const router = useRouter();
 
   const words = levels[level].split(" ");
 
@@ -28,7 +30,7 @@ export default function FillInTheBlanks() {
 
   const generateBlanks = () => {
     const totalBlanks =
-      difficulty === "easy" ? 5 : difficulty === "medium" ? 9 : 12;
+      difficulty === "easy" ? 3 : difficulty === "medium" ? 7 : 12;
     const randomBlanks = new Set<number>();
 
     while (randomBlanks.size < totalBlanks) {
@@ -50,15 +52,6 @@ export default function FillInTheBlanks() {
   const checkCorrect = (word: string, input: string) =>
     word.toLowerCase() === input.toLowerCase();
 
-  const handleNextLevel = () => {
-    setSubmitted(false);
-    if (level === levels.length - 1) {
-      setLevel(0); // loop back to level 1
-    } else {
-      setLevel(level + 1);
-    }
-  };
-
   const handleSubmit = () => {
     setSubmitted(true);
     const allCorrect = blanks.every((index) =>
@@ -66,6 +59,16 @@ export default function FillInTheBlanks() {
     );
     if (allCorrect) {
       setCompleted(true);
+    }
+  };
+
+  const handleNextLevel = () => {
+    setSubmitted(false);
+    if (level === levels.length - 1) {
+     
+      router.push("/"); 
+    } else {
+      setLevel(level + 1);
     }
   };
 
@@ -195,7 +198,7 @@ export default function FillInTheBlanks() {
           className="mt-12 px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold"
           whileTap={{ scale: 0.95 }}
         >
-          Next Level
+          Finish Game
         </motion.button>
       )}
 
