@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const levels = [
-  `Articulate expertise in formulating and solving problems of interest, through the application of technology, and by using mathematical foundations, algorithmic principles, and computer science theory in the design and development of computer-based systems and processes.`,
+  `Articulate expertise in understanding, analyzing, and applying current and emerging technologies in the design and development of IT-based solutions for entertainment and multimedia computing profession.`,
   `Perform tasks effectively as individuals and team members in the workplace growing into highly technical or project management and leadership roles.`,
   `Pursue life-long learning enabling them to adapt and grow as organizational responsibilities change.`,
 ];
@@ -93,7 +93,7 @@ export default function FillInTheBlanks() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          LMAO need help memorizing? I got you for IT129 :3
+          do u need help memorizing? i got you bai :3
         </motion.p>
 
         {/* Difficulty Selection */}

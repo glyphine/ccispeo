@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const levels = [
-  `Articulate expertise in formulating and solving problems of interest, through the application of technology, and by using mathematical foundations, algorithmic principles, and computer science theory in the design and development of computer-based systems and processes.`,
+  `Articulate expertise in understanding, analyzing, and applying current and emerging technologies in the design and development of IT-based solutions for business processes.`,
   `Perform tasks effectively as individuals and team members in the workplace growing into highly technical or project management and leadership roles.`,
   `Pursue life-long learning enabling them to adapt and grow as organizational responsibilities change.`,
 ];
@@ -19,7 +19,7 @@ export default function FillInTheBlanks() {
   const [started, setStarted] = useState(false);
   const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
     "easy"
-  ); 
+  );
   const router = useRouter();
 
   const words = levels[level].split(" ");
@@ -65,8 +65,7 @@ export default function FillInTheBlanks() {
   const handleNextLevel = () => {
     setSubmitted(false);
     if (level === levels.length - 1) {
-     
-      router.push("/"); 
+      router.push("/");
     } else {
       setLevel(level + 1);
     }
@@ -93,7 +92,7 @@ export default function FillInTheBlanks() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          LMAO need help memorizing? I got you for IT129 :3
+          need help memorizing? i got you hekhek :3
         </motion.p>
 
         {/* Difficulty Selection */}
@@ -134,9 +133,9 @@ export default function FillInTheBlanks() {
         >
           Start Game
         </motion.button>
-        <div className="absolute bottom-0 w-full text-center py-2 text-sm text-gray-400">
-          Developed by Gwyn (glyphine)
-        </div>
+        <div className="absolute bottom-0 w-full text-center py-2 text-sm text-gray-400 pointer-events-none">
+        Developed by Gwyn (glyphine)
+      </div>
       </motion.div>
     );
   }
