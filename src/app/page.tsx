@@ -132,7 +132,7 @@ export default function FillInTheBlanks() {
           Start Game
         </motion.button>
         <div className="absolute bottom-0 w-full text-center py-2 text-sm text-gray-400">
-          Developed by Gwyn Lobaton
+          Developed by Gwyn (glyphine)
         </div>
       </motion.div>
     );
